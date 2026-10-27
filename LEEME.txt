@@ -1,0 +1,44 @@
+KibianSubs — Landing (versión 1.2)
+==================================
+
+Archivos:
+  index.html        Página principal
+  privacidad.html   Política de privacidad
+  terminos.html     Términos de uso
+  img/              Capturas de la app, ícono y favicon
+
+Publicar en GitHub (página + instalador en el mismo repositorio):
+  1. Crea un repositorio PÚBLICO llamado, por ejemplo, "kibiansubs".
+  2. Sube el contenido de esta carpeta (index.html, privacidad.html,
+     terminos.html, img/) a la raíz del repositorio.
+  3. Settings → Pages → Source: "Deploy from a branch" → rama "main",
+     carpeta "/ (root)" → Save. En 1-2 minutos la página queda en
+     https://TU-USUARIO.github.io/kibiansubs/
+  4. Releases → "Create a new release" → tag "v0.8.0" → arrastra el
+     instalador renombrado a KibianSubs-setup.exe → "Publish release".
+  Los botones "Descargar gratis" apuntan solos a
+  https://github.com/TU-USUARIO/kibiansubs/releases/latest/download/KibianSubs-setup.exe
+  (siempre la última versión). Para una versión nueva solo creas otro
+  release con el archivo con ese mismo nombre.
+
+  Si un día publicas la página en otro dominio, escribe el enlace de
+  descarga en DOWNLOAD_URL, al final de index.html.
+
+Pago: el botón "Comprar Pro" abre el enlace de Lemon Squeezy:
+  https://kibianpixel.lemonsqueezy.com/checkout/buy/8a5cf7a6-4aa0-4c1c-b451-5b0de8e15ba6
+
+La política de privacidad (privacidad.html) es la que debes poner como
+"URL de privacidad" al publicar en la Microsoft Store.
+
+Versiones:
+  1.2 — Venta de Pro: botón "Comprar Pro · 19,99 USD" con Lemon Squeezy,
+        pregunta "¿Cómo activo Pro?" con los pasos, nueva sección de censura
+        de groserías (y en los planes gratis y Pro), preguntas sobre el aviso
+        de Windows y la censura, descarga desde GitHub Releases,
+        © 2026 KibianSubs, y privacidad y términos actualizados (Lemon
+        Squeezy y la revisión de la licencia al abrir la app).
+  1.1 — Lanzamiento de la versión gratis: botones de descarga apuntan a
+        descargas/KibianSubs-setup.exe; Pro aparece como "Próximamente" con
+        lista de espera por correo y precio especial de lanzamiento.
+  1.0 — Primera versión: capturas reales de la app, funciones, precio 19,99 USD,
+        preguntas frecuentes, política de privacidad y términos de uso.
