@@ -1,4 +1,4 @@
-KibianSubs — Landing (versión 1.7)
+KibianSubs — Landing (versión 1.8)
 ==================================
 
 Archivos:
@@ -60,6 +60,8 @@ IMPORTANTE al subir una versión nueva:
   misma) a la raíz del repositorio. No subas el .zip al repositorio.
 
 Versiones:
+  1.8 — VirusTotal: "0 detecciones en más de 50 antivirus" (resultado real
+        de la v0.8.3: 0/56).
   1.7 — Textos para vender más y sin tecnicismos: nuevo titular, sección
         "Si haces videos, esto te suena" (problema → solución), botón
         después de los 3 pasos, ahorro frente a otras apps, "Actualizaciones
