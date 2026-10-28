@@ -1,0 +1,82 @@
+KibianSubs — Landing (versión 1.4)
+==================================
+
+Archivos:
+  index.html        Página principal
+  privacidad.html   Política de privacidad
+  terminos.html     Términos de uso
+  img/              Capturas de la app, ícono, favicon e imagen para compartir
+  sitemap.xml       Lista de páginas para Google y Bing
+
+Publicar en GitHub (página + instalador en el mismo repositorio):
+  1. Crea un repositorio PÚBLICO llamado, por ejemplo, "kibiansubs".
+  2. Sube el contenido de esta carpeta (index.html, privacidad.html,
+     terminos.html, img/) a la raíz del repositorio.
+  3. Settings → Pages → Source: "Deploy from a branch" → rama "main",
+     carpeta "/ (root)" → Save. En 1-2 minutos la página queda en
+     https://TU-USUARIO.github.io/kibiansubs/
+  4. Releases → "Create a new release" → tag "v0.8.0" → arrastra el
+     instalador renombrado a KibianSubs-setup.exe → "Publish release".
+  Los botones "Descargar gratis" apuntan solos a
+  https://github.com/TU-USUARIO/kibiansubs/releases/latest/download/KibianSubs-setup.exe
+  (siempre la última versión). Para una versión nueva solo creas otro
+  release con el archivo con ese mismo nombre.
+
+  Si un día publicas la página en otro dominio, escribe el enlace de
+  descarga en DOWNLOAD_URL, al final de index.html.
+
+Pago: el botón "Comprar Pro" abre el enlace de Lemon Squeezy:
+  https://kibianpixel.lemonsqueezy.com/checkout/buy/8a5cf7a6-4aa0-4c1c-b451-5b0de8e15ba6
+
+La política de privacidad (privacidad.html) es la que debes poner como
+"URL de privacidad" al publicar en la Microsoft Store.
+
+Buscadores (Google y Bing):
+  Las direcciones de la página están escritas en index.html, privacidad.html,
+  terminos.html y sitemap.xml como
+  https://fabianlasso3.github.io/kibiansubs/ . Si un día cambias de
+  dominio, cámbialas en esos archivos.
+
+VirusTotal (enlace "ver análisis" debajo del botón de descarga):
+  El enlace apunta al análisis del KibianSubs-setup.exe v0.8.3. Sube ese
+  .exe una vez en https://www.virustotal.com (pestaña FILE) para que el
+  enlace funcione y revisa cuántos antivirus lo marcan. Con cada versión
+  nueva súbelo otra vez y pega el nuevo enlace en index.html (busca
+  "virustotal").
+
+Estadísticas de visitas (GoatCounter, gratis y sin cookies):
+  1. Crea tu cuenta en https://www.goatcounter.com con el código
+     "kibiansubs" (queda https://kibiansubs.goatcounter.com).
+  2. Listo: index.html ya trae el script. Ahí verás visitas, de qué país
+     y de dónde llegan, y los clics en "descargar-*" y "comprar-pro".
+  Si usas otro código, cámbialo en index.html (busca "goatcounter").
+
+Contador de descargas:
+  Se muestra solo cuando el instalador supera MIN_DESCARGAS (100) en
+  GitHub. Puedes cambiar ese número al final de index.html. Cuenta
+  también las descargas de las actualizaciones automáticas.
+
+Versiones:
+  1.4 — Comparación de precio anual con Captions, CapCut y Submagic;
+        video antes/después de la censura con sonido; nota de Windows
+        SmartScreen + análisis de VirusTotal bajo la descarga; botones
+        "Probar gratis sin registro ⚡" y "Obtener Pro para siempre";
+        garantía y pago seguro bajo el botón Pro; contador real de
+        descargas (desde 100); estadísticas con GoatCounter y privacidad
+        actualizada.
+  1.3 — Para que Google y Bing la encuentren: sitemap.xml,
+        dirección oficial de cada página, datos de aplicación de software
+        (nombre, precio, Windows, descarga), título y descripción con
+        TikTok, Reels, Shorts, YouTube y censura, e imagen para compartir en
+        redes (img/kibiansubs-compartir.png, 1200×630).
+  1.2 — Venta de Pro: botón "Comprar Pro · 19,99 USD" con Lemon Squeezy,
+        pregunta "¿Cómo activo Pro?" con los pasos, nueva sección de censura
+        de groserías (y en los planes gratis y Pro), preguntas sobre el aviso
+        de Windows y la censura, descarga desde GitHub Releases,
+        © 2026 KibianSubs, y privacidad y términos actualizados (Lemon
+        Squeezy y la revisión de la licencia al abrir la app).
+  1.1 — Lanzamiento de la versión gratis: botones de descarga apuntan a
+        descargas/KibianSubs-setup.exe; Pro aparece como "Próximamente" con
+        lista de espera por correo y precio especial de lanzamiento.
+  1.0 — Primera versión: capturas reales de la app, funciones, precio 19,99 USD,
+        preguntas frecuentes, política de privacidad y términos de uso.
