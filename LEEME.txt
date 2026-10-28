@@ -1,4 +1,4 @@
-KibianSubs — Landing (versión 1.5)
+KibianSubs — Landing (versión 1.7)
 ==================================
 
 Archivos:
@@ -45,8 +45,7 @@ VirusTotal (enlace "ver análisis" debajo del botón de descarga):
   "virustotal").
 
 Estadísticas de visitas (GoatCounter, gratis y sin cookies):
-  1. Crea tu cuenta en https://www.goatcounter.com con el código
-     "kibiansubs" (queda https://kibiansubs.goatcounter.com).
+  1. Tu cuenta: https://kibian.goatcounter.com (código "kibian").
   2. Listo: index.html ya trae el script. Ahí verás visitas, de qué país
      y de dónde llegan, y los clics en "descargar-*" y "comprar-pro".
   Si usas otro código, cámbialo en index.html (busca "goatcounter").
@@ -61,6 +60,14 @@ IMPORTANTE al subir una versión nueva:
   misma) a la raíz del repositorio. No subas el .zip al repositorio.
 
 Versiones:
+  1.7 — Textos para vender más y sin tecnicismos: nuevo titular, sección
+        "Si haces videos, esto te suena" (problema → solución), botón
+        después de los 3 pasos, ahorro frente a otras apps, "Actualizaciones
+        gratis", pregunta sobre actualizaciones, cierre final con botones y
+        barra fija de descarga en el celular. Nuevos clics en GoatCounter:
+        descargar-pasos, descargar-final, descargar-barra-movil y
+        comprar-pro-final.
+  1.6 — GoatCounter apunta a tu cuenta real: kibian.goatcounter.com.
   1.5 — Se quitan todos los emojis de la página: ahora son íconos SVG
         (rayo, flecha, descarga, información, escudo, candado y sonido).
   1.4 — Comparación de precio anual con Captions, CapCut y Submagic;

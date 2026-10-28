@@ -26,7 +26,14 @@ a{color:#FFE600}a:hover{color:#fff07a}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
 </style>
-<style>html{scroll-behavior:smooth}img{max-width:100%}</style>
+<style>html{scroll-behavior:smooth}img{max-width:100%}
+#barra-movil{display:none}
+@media (max-width:720px){
+  #barra-movil{display:block;position:fixed;left:0;right:0;bottom:0;z-index:50;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:rgba(14,15,19,.94);border-top:1px solid #22252e;backdrop-filter:blur(8px);transform:translateY(110%);transition:transform .25s ease}
+  #barra-movil.visible{transform:none}
+  #barra-movil a{display:block;text-align:center;background:#FFE600;color:#111;text-decoration:none;font:700 16px Inter,system-ui,sans-serif;padding:14px;border-radius:12px}
+  footer{padding-bottom:76px}
+}</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,14 +76,14 @@ details summary::-webkit-details-marker{display:none}
 
   <section id="inicio" style="max-width: 1180px; margin: 0 auto; padding: 72px 24px 88px; display: flex; flex-wrap: wrap; align-items: center; gap: 56px">
     <div style="flex: 999 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
-      <span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #FFE600; border: 1px solid #4a4420; padding: 6px 12px; border-radius: 99px">Para Windows · Sin suscripción</span>
-      <h1 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 60px); line-height: 1.08; letter-spacing: -0.5px">Subtítulos automáticos para tus videos, <span style="color: #FFE600">sin pagar cada mes.</span></h1>
-      <p style="margin: 0; font-size: 19px; color: #B4B9C6; max-width: 560px">KibianSubs escucha tu video, escribe lo que dices y le pone subtítulos animados listos para TikTok, Reels, Shorts y YouTube. Todo pasa en tu computador: tu video nunca se sube a internet.</p>
+      <span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #FFE600; border: 1px solid #4a4420; padding: 6px 12px; border-radius: 99px">Gratis para siempre · Pro con un solo pago</span>
+      <h1 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(36px, 5vw, 60px); line-height: 1.08; letter-spacing: -0.5px">Subtítulos que atrapan en tus videos, <span style="color: #FFE600">sin pagar cada mes.</span></h1>
+      <p style="margin: 0; font-size: 19px; color: #B4B9C6; max-width: 560px">Arrastra tu video y KibianSubs escribe solo todo lo que dices, con subtítulos animados listos para TikTok, Reels, Shorts y YouTube. Olvídate de escribir a mano, de subir tus videos a internet y de las mensualidades.</p>
       <div style="display: flex; flex-wrap: wrap; gap: 12px">
         <a href="#descargar" data-download data-goatcounter-click="descargar-inicio" style="background: #FFE600; color: #111111; text-decoration: none; font-weight: 700; padding: 15px 26px; border-radius: 12px; font-size: 17px">Probar gratis sin registro<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></a>
         <a href="#precio" data-goatcounter-click="ver-pro-inicio" style="border: 1px solid #343846; color: #ECEEF3; text-decoration: none; font-weight: 600; padding: 15px 26px; border-radius: 12px; font-size: 17px">Pro para siempre · 19,99 USD</a>
       </div>
-      <p style="margin: 0; font-size: 14px; color: #8D93A1">Windows 10 y 11 · Español e inglés · Videos verticales y horizontales</p>
+      <p style="margin: 0; font-size: 14px; color: #B4B9C6; display: flex; flex-wrap: wrap; gap: 6px 18px"><span style="color: #B4B9C6"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span>Sin tarjeta</span><span style="color: #B4B9C6"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span>Sin crear cuenta</span><span style="color: #B4B9C6"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span>Para Windows 10 y 11</span></p>
       <p id="contador" hidden style="margin: 0; font-size: 15px; color: #ECEEF3"><svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><strong id="contador-n" style="color: #FFE600"></strong> descargas y contando</p>
       <div style="display: flex; flex-direction: column; gap: 8px; max-width: 560px; padding: 14px 16px; border: 1px solid #2a2e39; border-radius: 12px; background: #14161C; font-size: 14px; color: #B4B9C6">
         <span><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Al instalar, si Windows muestra <strong style="color: #ECEEF3">“Windows protegió tu PC”</strong>, toca <strong style="color: #ECEEF3">“Más información”</strong> y luego <strong style="color: #ECEEF3">“Ejecutar de todas formas”</strong>. Aparece con los programas nuevos que Windows aún no conoce.</span>
@@ -101,14 +108,38 @@ details summary::-webkit-details-marker{display:none}
       </div>
       <img src="img/app-editor.webp" alt="Ventana de KibianSubs: vista previa del video con subtítulos, lista de texto editable y panel de diseños" style="width: 100%; height: auto; display: block">
     </div>
-    <p style="margin: 0; text-align: center; color: #8D93A1; font-size: 15px">Así se ve KibianSubs: tu video a la izquierda, el texto abajo y los diseños a la derecha.</p>
+    <p style="margin: 0; text-align: center; color: #8D93A1; font-size: 15px">Así de simple se ve: tu video, el texto y los diseños en una sola pantalla.</p>
+  </section>
+
+  <section id="problema" style="max-width: 1180px; margin: 0 auto; padding: 0 24px 88px; display: flex; flex-direction: column; gap: 32px">
+    <div style="display: flex; flex-direction: column; gap: 10px; max-width: 700px">
+      <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15">Si haces videos, esto te suena</h2>
+      <p style="margin: 0; color: #B4B9C6; font-size: 17px">Mucha gente ve los videos sin sonido. Sin subtítulos, pasan de largo. Pero ponerlos no debería costarte la tarde ni una mensualidad.</p>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px">
+      <div style="background: #14161C; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; align-items: center; gap: 10px; color: #FF7A7F"><svg aria-hidden="true" width="22px" height="22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 0px; flex: none"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #ECEEF3">Horas escribiendo a mano</h3></div>
+        <p style="margin: 0; color: #8D93A1; text-decoration: line-through; text-decoration-color: rgba(255,122,127,0.5)">Pausar, escribir, ajustar tiempos… una y otra vez.</p>
+        <p style="margin: 0; color: #ECEEF3; display: flex; gap: 8px"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1.1em" height="1.1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 0px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span><span>KibianSubs escribe por ti mientras tú te tomas un café.</span></p>
+      </div>
+      <div style="background: #14161C; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; align-items: center; gap: 10px; color: #FF7A7F"><svg aria-hidden="true" width="22px" height="22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 0px; flex: none"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #ECEEF3">Otra suscripción más</h3></div>
+        <p style="margin: 0; color: #8D93A1; text-decoration: line-through; text-decoration-color: rgba(255,122,127,0.5)">Pagar cada mes por una app que usas a ratos.</p>
+        <p style="margin: 0; color: #ECEEF3; display: flex; gap: 8px"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1.1em" height="1.1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 0px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span><span>Un solo pago y es tuyo. O úsala gratis para siempre.</span></p>
+      </div>
+      <div style="background: #14161C; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 12px">
+        <div style="display: flex; align-items: center; gap: 10px; color: #FF7A7F"><svg aria-hidden="true" width="22px" height="22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 0px; flex: none"><circle cx="12" cy="12" r="9"/><path d="m5.7 5.7 12.6 12.6"/></svg><h3 style="margin: 0; font-size: 18px; font-weight: 600; color: #ECEEF3">Videos bajados por una grosería</h3></div>
+        <p style="margin: 0; color: #8D93A1; text-decoration: line-through; text-decoration-color: rgba(255,122,127,0.5)">Se te escapó una palabra y la plataforma te limita.</p>
+        <p style="margin: 0; color: #ECEEF3; display: flex; gap: 8px"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1.1em" height="1.1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 0px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span><span>La app las encuentra y las tapa con un pitido en un clic.</span></p>
+      </div>
+    </div>
   </section>
 
   <section id="como-funciona" style="background: #14161C; border-top: 1px solid #22252e; border-bottom: 1px solid #22252e">
     <div style="max-width: 1180px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px">
-        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15">Tres pasos y listo</h2>
-        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Sin cuentas, sin subir archivos, sin editar línea de tiempo.</p>
+        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15">Tu video con subtítulos en tres pasos</h2>
+        <p style="margin: 0; color: #B4B9C6; font-size: 17px">No necesitas saber editar. Si sabes arrastrar un archivo, ya sabes usar KibianSubs.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px">
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
@@ -116,25 +147,29 @@ details summary::-webkit-details-marker{display:none}
           <div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
             <span style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: 28px; line-height: 1; color: #FFE600">1</span>
             <h3 style="margin: 0; font-size: 20px; font-weight: 600">Arrastra tu video</h3>
-            <p style="margin: 0; color: #B4B9C6">MP4, MOV, MKV o WEBM. La app detecta sola si es vertical (9:16) u horizontal (16:9).</p>
+            <p style="margin: 0; color: #B4B9C6">Vertical u horizontal, tal como lo grabaste. La app se acomoda sola.</p>
           </div>
         </div>
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
           <img src="img/app-generando.webp" alt="KibianSubs generando subtítulos con barra de progreso" style="width: 100%; height: 190px; object-fit: cover; object-position: center; display: block; border-bottom: 1px solid #2a2e39">
           <div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
             <span style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: 28px; line-height: 1; color: #FFE600">2</span>
-            <h3 style="margin: 0; font-size: 20px; font-weight: 600">Genera los subtítulos</h3>
-            <p style="margin: 0; color: #B4B9C6">La inteligencia artificial escribe lo que dices, palabra por palabra, y te muestra el avance.</p>
+            <h3 style="margin: 0; font-size: 20px; font-weight: 600">La app escribe por ti</h3>
+            <p style="margin: 0; color: #B4B9C6">Escucha tu video y escribe cada palabra en su momento exacto. Tú solo miras cómo avanza.</p>
           </div>
         </div>
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; overflow: hidden; display: flex; flex-direction: column">
           <img src="img/paso-3.webp" alt="Subtítulo con diseño Pop aplicado en la vista previa" style="width: 100%; height: 190px; object-fit: cover; object-position: center; display: block; border-bottom: 1px solid #2a2e39">
           <div style="padding: 24px; display: flex; flex-direction: column; gap: 8px">
             <span style="font-family: Montserrat, sans-serif; font-weight: 800; font-size: 28px; line-height: 1; color: #FFE600">3</span>
-            <h3 style="margin: 0; font-size: 20px; font-weight: 600">Elige el diseño y exporta</h3>
-            <p style="margin: 0; color: #B4B9C6">Escoge un diseño, ajusta tamaño y posición, y exporta el video con los subtítulos puestos.</p>
+            <h3 style="margin: 0; font-size: 20px; font-weight: 600">Elige el estilo y publica</h3>
+            <p style="margin: 0; color: #B4B9C6">Escoge un diseño, ponlo donde quieras y guarda tu video listo para subir.</p>
           </div>
         </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px">
+        <a href="#descargar" data-download data-goatcounter-click="descargar-pasos" style="background: #FFE600; color: #111111; text-decoration: none; font-weight: 700; padding: 15px 26px; border-radius: 12px; font-size: 17px">Hacer mi primer video gratis<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M5 12h12"/><path d="m13 6 6 6-6 6"/></svg></a>
+        <span style="color: #8D93A1; font-size: 14px">Sin registro · Sin tarjeta · Sin límite de videos</span>
       </div>
     </div>
   </section>
@@ -142,9 +177,9 @@ details summary::-webkit-details-marker{display:none}
   <section id="funciones" style="max-width: 1180px; margin: 0 auto; padding: 96px 24px; display: flex; flex-direction: column; gap: 96px">
     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
       <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Corrige y destaca lo importante</h2>
-        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Revisa el texto como en un documento. Si algo quedó mal escrito, haces clic y lo corriges.</p>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4"><li>Corrige cualquier palabra con un clic</li><li>Marca palabras clave para que salgan de otro color (Pro)</li><li>Quita muletillas como “eh”, “mmm” u “o sea” (Pro)</li></ul>
+        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Que se lea perfecto y resalte lo importante</h2>
+        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Revisas el texto como si fuera un mensaje. ¿Algo quedó mal? Un clic y listo.</p>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4"><li>Corrige cualquier palabra con un clic</li><li>Pinta de otro color las palabras que quieres que se queden en la cabeza (Pro)</li><li>Borra los “eh”, “mmm” y “o sea” para sonar más seguro (Pro)</li></ul>
       </div>
       <div style="flex: 999 1 520px; min-width: 0">
         <img src="img/app-palabras-clave.webp" alt="Texto transcrito con dos palabras clave marcadas y el subtítulo mostrándolas en rosado" style="width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid #2a2e39">
@@ -156,20 +191,20 @@ details summary::-webkit-details-marker{display:none}
       </div>
       <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
         <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Hazlo con tu estilo</h2>
-        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Elige entre diseños listos y ajústalos hasta que se vean como tu marca.</p>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4"><li>Cambia tamaño y posición, o arrastra el texto sobre el video</li><li>Escoge colores, mayúsculas y palabras por bloque (Pro)</li><li>Guarda tu combinación como “Mi estilo” y úsala siempre (Pro)</li></ul>
+        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Diseños listos que se ven profesionales desde el primer video. Ajústalos hasta que griten tu marca.</p>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4"><li>Cambia tamaño y posición, o arrastra el texto sobre el video</li><li>Elige colores, mayúsculas y cuántas palabras salen a la vez (Pro)</li><li>Guarda tu combinación como “Mi estilo” y úsala siempre (Pro)</li></ul>
       </div>
     </div>
     <div id="censura" style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
       <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
         <span style="align-self: flex-start; background: rgba(255, 90, 95, 0.16); color: #FF5A5F; font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 99px">NUEVO</span>
-        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Censura groserías en&nbsp;un&nbsp;clic</h2>
-        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Evita que TikTok, YouTube o Instagram te bajen el video por lenguaje. La app encuentra las groserías y las tapa en el audio y en el texto.</p>
+        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Que no te bajen un video por una&nbsp;grosería</h2>
+        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Habla natural y publica tranquilo. La app encuentra las groserías y las tapa en el audio y en el texto, para que TikTok, YouTube o Instagram no te limiten.</p>
         <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4">
           <li>Pitido o silencio, y **** en el subtítulo (gratis)</li>
           <li>Palabra al revés, pato, claxon, golpe cómico… o tu propio sonido (Pro)</li>
           <li>Jerga de cada país e insultos, en español e inglés (Pro)</li>
-          <li>Tú decides: marca o desmarca cualquier palabra</li>
+          <li>Tú tienes la última palabra: marca o desmarca la que quieras</li>
         </ul>
       </div>
       <div style="flex: 999 1 520px; min-width: 0">
@@ -182,9 +217,9 @@ details summary::-webkit-details-marker{display:none}
 
     <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px">
       <div style="flex: 1 1 340px; min-width: 0; display: flex; flex-direction: column; gap: 14px">
-        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Vertical u horizontal</h2>
-        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Sirve igual para TikTok, Reels y Shorts que para tus videos de YouTube. La app acomoda el texto a cada formato.</p>
-        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4"><li>Formato vertical 9:16 y horizontal 16:9</li><li>Exporta SRT o VTT para subirlos a YouTube (Pro)</li><li>Traduce los subtítulos al inglés (Pro)</li></ul>
+        <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(26px, 3vw, 36px); line-height: 1.15">Un solo programa para todas tus redes</h2>
+        <p style="margin: 0; color: #B4B9C6; font-size: 17px">El mismo video sirve para TikTok, Reels, Shorts y YouTube. La app acomoda el texto a cada formato por ti.</p>
+        <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #C6CAD4"><li>Videos verticales y horizontales</li><li>Archivo de subtítulos para subir a YouTube (Pro)</li><li>Traduce tus subtítulos al inglés y llega a más gente (Pro)</li></ul>
       </div>
       <div style="flex: 999 1 520px; min-width: 0">
         <img src="img/app-horizontal.webp" alt="Video horizontal en KibianSubs con subtítulos" style="width: 100%; height: auto; display: block; border-radius: 14px; border: 1px solid #2a2e39">
@@ -194,27 +229,27 @@ details summary::-webkit-details-marker{display:none}
 
   <section style="background: #14161C; border-top: 1px solid #22252e">
     <div style="max-width: 1180px; margin: 0 auto; padding: 80px 24px; display: flex; flex-direction: column; gap: 36px">
-      <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15">Por qué KibianSubs</h2>
+      <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15">Hecho para publicar más, no para pagar más</h2>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px">
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFE600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg>
           <h3 style="margin: 0; font-size: 18px; font-weight: 600">Tus videos no salen de tu PC</h3>
-          <p style="margin: 0; color: #B4B9C6">Nada se sube a internet. Ideal para contenido que todavía no publicas.</p>
+          <p style="margin: 0; color: #B4B9C6">Nada se sube a internet. Tu contenido sin publicar sigue siendo solo tuyo.</p>
         </div>
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFE600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M9 12l2 2 4-4"></path></svg>
           <h3 style="margin: 0; font-size: 18px; font-weight: 600">Pagas una sola vez</h3>
-          <p style="margin: 0; color: #B4B9C6">Nada de mensualidades ni minutos contados. Haz todos los videos que quieras.</p>
+          <p style="margin: 0; color: #B4B9C6">Nada de mensualidades ni minutos contados. Haz todos los videos que quieras, para siempre.</p>
         </div>
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFE600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4 4L19 7"></path></svg>
           <h3 style="margin: 0; font-size: 18px; font-weight: 600">Sin cuentas ni registros</h3>
-          <p style="margin: 0; color: #B4B9C6">Instalas, abres y empiezas. No pide correo ni contraseña para usarla gratis.</p>
+          <p style="margin: 0; color: #B4B9C6">Instalas, abres y empiezas. Ni correo, ni contraseña, ni tarjeta.</p>
         </div>
         <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 10px">
           <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFE600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7l1-8z"></path></svg>
           <h3 style="margin: 0; font-size: 18px; font-weight: 600">Simple de verdad</h3>
-          <p style="margin: 0; color: #B4B9C6">No es un editor de video. Hace una sola cosa y la hace bien: subtítulos.</p>
+          <p style="margin: 0; color: #B4B9C6">No es un editor complicado. Hace una sola cosa y la hace muy bien: subtítulos.</p>
         </div>
       </div>
     </div>
@@ -224,7 +259,7 @@ details summary::-webkit-details-marker{display:none}
     <div style="max-width: 1180px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; gap: 40px">
       <div style="display: flex; flex-direction: column; gap: 10px; max-width: 640px">
         <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(28px, 3.4vw, 40px); line-height: 1.15">Paga una vez. Es tuyo.</h2>
-        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Empieza gratis. Si te gusta, pasa a Pro con un solo pago, sin mensualidades.</p>
+        <p style="margin: 0; color: #B4B9C6; font-size: 17px">Empieza gratis hoy. Cuando quieras quitar la marca de agua y desbloquearlo todo, pasa a Pro con un solo pago.</p>
       </div>
 
       <div style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 18px">
@@ -247,6 +282,7 @@ details summary::-webkit-details-marker{display:none}
             <div style="height: 14px; border-radius: 99px; background: #2a2e39; overflow: hidden"><div style="width: 6.7%; min-width: 14px; height: 100%; background: #FFE600"></div></div>
           </div>
         </div>
+        <p style="margin: 0; font-size: 16px; color: #ECEEF3">Con KibianSubs Pro te ahorras <strong style="color: #FFE600">más de 120 USD el primer año</strong> frente a la más barata de estas apps, y desde el segundo año no pagas nada.</p>
         <p style="margin: 0; font-size: 12px; color: #8D93A1">Precios públicos en USD de los planes de pago, consultados en octubre de 2026. Pueden variar según el país y cambiar con el tiempo, y cada app ofrece funciones distintas. Captions, CapCut y Submagic son marcas de sus dueños, sin relación con KibianSubs.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: stretch">
@@ -255,14 +291,14 @@ details summary::-webkit-details-marker{display:none}
           <div style="display: flex; flex-direction: column; gap: 6px">
             <h3 style="margin: 0; font-size: 22px; font-weight: 600">Gratis</h3>
             <p style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 44px; line-height: 1">0 USD</p>
-            <p style="margin: 0; color: #8D93A1; font-size: 14px">Para siempre, sin límite de videos</p>
+            <p style="margin: 0; color: #8D93A1; font-size: 14px">Para siempre · Sin tarjeta · Sin límite de videos</p>
           </div>
           <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #C6CAD4">
-            <li>Transcripción ilimitada en tu PC</li>
+            <li>Videos ilimitados, sin minutos contados</li>
             <li>10 diseños de subtítulos</li>
             <li>50 fuentes</li>
             <li>Tamaño y posición del texto</li>
-            <li>Corrección del texto</li>
+            <li>Corrige el texto con un clic</li>
             <li>Censura de groserías con pitido o silencio</li>
             <li>Marca de KibianSubs en el video</li>
           </ul>
@@ -276,24 +312,24 @@ details summary::-webkit-details-marker{display:none}
               <span style="background: #FFE600; color: #111111; font-size: 12px; font-weight: 700; padding: 3px 9px; border-radius: 6px">PAGO ÚNICO</span>
             </div>
             <p style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: 44px; line-height: 1">19,99 USD</p>
-            <p style="margin: 0; color: #8D93A1; font-size: 14px">Sin suscripción · Licencia sin vencimiento · Hasta 2 computadores</p>
+            <p style="margin: 0; color: #8D93A1; font-size: 14px">Menos que un mes de otras apps · Tuyo para siempre · 2 computadores</p>
           </div>
           <ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #C6CAD4">
             <li>Todo lo de la versión gratis</li>
             <li><strong style="color: #ECEEF3">Sin marca de agua</strong></li>
             <li>20 diseños, incluidos los animados</li>
             <li>100 fuentes</li>
-            <li>Colores, mayúsculas y palabras por bloque</li>
+            <li>Colores, mayúsculas y cuántas palabras salen a la vez</li>
             <li>Guarda tus propios estilos</li>
             <li>Destaca palabras clave</li>
             <li>Quita muletillas (eh, mmm, o sea…)</li>
-            <li>Censura avanzada: insultos, jerga de cada país, palabra al revés, sonidos divertidos o el tuyo</li>
+            <li>Censura con estilo: palabra al revés, sonidos divertidos o el tuyo, y jerga de cada país</li>
             <li>Traduce los subtítulos al inglés</li>
-            <li>Modelo de transcripción más preciso</li>
-            <li>Exporta SRT y VTT para YouTube</li>
+            <li>Subtítulos más precisos: menos cosas que corregir</li>
+            <li>Archivo de subtítulos para YouTube</li><li>Actualizaciones gratis</li>
           </ul>
           <a href="https://kibianpixel.lemonsqueezy.com/checkout/buy/8a5cf7a6-4aa0-4c1c-b451-5b0de8e15ba6" data-goatcounter-click="comprar-pro" style="margin-top: auto; text-align: center; background: #FFE600; color: #111111; text-decoration: none; font-weight: 700; padding: 14px 20px; border-radius: 12px">Obtener Pro para siempre · 19,99 USD<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M5 12h12"/><path d="m13 6 6 6-6 6"/></svg></a>
-          <p style="margin: 0; text-align: center; font-size: 13px; color: #8D93A1"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 4px; flex: none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Garantía de 14 días · <svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 4px; flex: none"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro con Lemon Squeezy</p>
+          <p style="margin: 0; text-align: center; font-size: 13px; color: #8D93A1"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 4px; flex: none"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>Si no te convence, te devolvemos tu dinero en 14 días · <svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 4px; flex: none"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Pago seguro con Lemon Squeezy</p>
         </div>
       </div>
     </div>
@@ -304,11 +340,11 @@ details summary::-webkit-details-marker{display:none}
     <div style="display: flex; flex-direction: column; gap: 12px">
       <details style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 14px; padding: 18px 22px">
         <summary style="font-weight: 600; font-size: 17px">¿Mis videos se suben a internet?</summary>
-        <p style="margin: 12px 0 0; color: #B4B9C6">No. KibianSubs transcribe y exporta todo dentro de tu computador. Solo se conecta a internet para descargar el modelo de voz la primera vez y para activar la licencia Pro.</p>
+        <p style="margin: 12px 0 0; color: #B4B9C6">No. KibianSubs transcribe y exporta todo dentro de tu computador. Solo usa internet la primera vez, para descargar lo que necesita, y para activar Pro.</p>
       </details>
       <details style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 14px; padding: 18px 22px">
         <summary style="font-weight: 600; font-size: 17px">¿Necesito un computador potente?</summary>
-        <p style="margin: 12px 0 0; color: #B4B9C6">No hace falta tarjeta gráfica. En un PC normal con Windows 10 u 11 funciona bien; los más rápidos terminan antes.</p>
+        <p style="margin: 12px 0 0; color: #B4B9C6">No. Funciona en un PC normal con Windows 10 u 11, sin tarjeta gráfica especial. Mientras más rápido tu PC, antes termina.</p>
       </details>
       <details style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 14px; padding: 18px 22px">
         <summary style="font-weight: 600; font-size: 17px">¿En qué idiomas funciona?</summary>
@@ -336,11 +372,31 @@ details summary::-webkit-details-marker{display:none}
         <p style="margin: 10px 0 0; color: #B4B9C6">La clave sirve en 2 computadores. Para pasarla a otro, usa “Desactivar en este equipo” en el primero.</p>
       </details>
       <details style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 14px; padding: 18px 22px">
+        <summary style="font-weight: 600; font-size: 17px">¿Las actualizaciones tienen costo?</summary>
+        <p style="margin: 12px 0 0; color: #B4B9C6">No. Cuando hay una versión nueva, la app te avisa y se actualiza sola, sin reinstalar. Gratis, también para Pro.</p>
+      </details>
+      <details style="background: #1A1D24; border: 1px solid #2a2e39; border-radius: 14px; padding: 18px 22px">
         <summary style="font-weight: 600; font-size: 17px">¿Puedo pedir un reembolso?</summary>
         <p style="margin: 12px 0 0; color: #B4B9C6">Sí, dentro de los 14 días siguientes a la compra. Escríbenos y lo gestionamos. Más detalles en los <a href="terminos.html">términos de uso</a>.</p>
       </details>
     </div>
   </section>
+
+  <section id="final" style="background: #14161C; border-top: 1px solid #22252e">
+    <div style="max-width: 860px; margin: 0 auto; padding: 88px 24px; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+      <h2 style="margin: 0; font-family: Montserrat, sans-serif; font-weight: 800; font-size: clamp(30px, 4vw, 46px); line-height: 1.12">Tu próximo video merece <span style="color: #FFE600">subtítulos que atrapen.</span></h2>
+      <p style="margin: 0; color: #B4B9C6; font-size: 18px; max-width: 600px">Descárgalo gratis, haz tu primer video hoy y decide después si quieres Pro. No tienes nada que perder.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
+        <a href="#descargar" data-download data-goatcounter-click="descargar-final" style="background: #FFE600; color: #111111; text-decoration: none; font-weight: 700; padding: 16px 28px; border-radius: 12px; font-size: 17px">Probar gratis sin registro<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></a>
+        <a href="https://kibianpixel.lemonsqueezy.com/checkout/buy/8a5cf7a6-4aa0-4c1c-b451-5b0de8e15ba6" data-goatcounter-click="comprar-pro-final" style="border: 1px solid #343846; color: #ECEEF3; text-decoration: none; font-weight: 600; padding: 16px 28px; border-radius: 12px; font-size: 17px">Obtener Pro · 19,99 USD</a>
+      </div>
+      <p style="margin: 0; color: #8D93A1; font-size: 14px">Sin tarjeta · Sin crear cuenta · Garantía de 14 días en Pro</p>
+    </div>
+  </section>
+
+  <div id="barra-movil" aria-hidden="true">
+    <a href="#descargar" data-download data-goatcounter-click="descargar-barra-movil" tabindex="-1">Probar gratis sin registro<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></a>
+  </div>
 
   <footer style="border-top: 1px solid #22252e">
     <div style="max-width: 1180px; margin: 0 auto; padding: 32px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; font-size: 14px; color: #8D93A1">
@@ -391,6 +447,24 @@ details summary::-webkit-details-marker{display:none}
       .catch(function () {});
   })();
 
+  // Barra fija de descarga en el celular: aparece al pasar el inicio y se
+  // esconde en la sección final, que ya tiene sus botones.
+  (function () {
+    var barra = document.getElementById("barra-movil");
+    var inicio = document.getElementById("inicio");
+    var final = document.getElementById("final");
+    var precio = document.getElementById("precio");
+    var visibles = {};
+    var obs = new IntersectionObserver(function (entradas) {
+      entradas.forEach(function (e) { visibles[e.target.id] = e.isIntersecting; });
+      var mostrar = !visibles.inicio && !visibles.final && !visibles.precio;
+      barra.classList.toggle("visible", mostrar);
+      barra.setAttribute("aria-hidden", mostrar ? "false" : "true");
+      barra.querySelector("a").tabIndex = mostrar ? 0 : -1;
+    });
+    [inicio, final, precio].forEach(function (el) { obs.observe(el); });
+  })();
+
   // Video de la censura: empieza en silencio (los navegadores no dejan
   // reproducir con sonido solo); el botón lo reinicia con sonido.
   (function () {
@@ -408,7 +482,7 @@ details summary::-webkit-details-marker{display:none}
   })();
 </script>
 <!-- Estadísticas de visitas (GoatCounter): sin cookies ni datos personales.
-     Si tu código en goatcounter.com no es "kibiansubs", cámbialo aquí. -->
-<script data-goatcounter="https://kibiansubs.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+     Si tu código en goatcounter.com no es "kibian", cámbialo aquí. -->
+<script data-goatcounter="https://kibian.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
