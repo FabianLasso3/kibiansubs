@@ -1,4 +1,4 @@
-KibianSubs — Landing (versión 1.8)
+KibianSubs — Landing (versión 2.0)
 ==================================
 
 Archivos:
@@ -60,6 +60,16 @@ IMPORTANTE al subir una versión nueva:
   misma) a la raíz del repositorio. No subas el .zip al repositorio.
 
 Versiones:
+  2.0 — Visitas desde el celular (en computador todo sigue igual): aviso
+        arriba "KibianSubs es para PC con Windows"; los botones de descarga
+        y la barra amarilla dicen "Envíame el link para mi PC" y abren una
+        ventana para enviárselo por WhatsApp o copiarlo. El link enviado es
+        https://fabianlasso3.github.io/kibiansubs/ y conserva el ?ref= de la
+        visita (por ejemplo ?ref=meta). Línea "Versión para Android
+        próximamente". Clics nuevos en GoatCounter: enviar-whatsapp-movil,
+        copiar-link-movil y pedir-link-movil-* (menu, inicio, pasos,
+        precio, final, barra-movil), que reemplazan a descargar-* en el
+        celular.
   1.8 — VirusTotal: "0 detecciones en más de 50 antivirus" (resultado real
         de la v0.8.3: 0/56).
   1.7 — Textos para vender más y sin tecnicismos: nuevo titular, sección

@@ -26,6 +26,34 @@ a{color:#FFE600}a:hover{color:#fff07a}
 details summary{cursor:pointer;list-style:none}
 details summary::-webkit-details-marker{display:none}
 </style>
+<script>
+  // ¿Se abrió en celular o tablet? (no pueden instalar un .exe de Windows)
+  (function () {
+    var ua = navigator.userAgent || "";
+    var movil = /Android|iPhone|iPad|iPod|Mobile|Silk|Kindle|BlackBerry|Opera Mini|IEMobile/i.test(ua) ||
+      (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+    if (movil) document.documentElement.classList.add("es-movil");
+  })();
+</script>
+<style>
+.solo-movil{display:none}
+html.es-movil .solo-movil{display:block}
+html.es-movil .solo-pc{display:none!important}
+#envio-fondo{position:fixed;inset:0;z-index:80;background:rgba(0,0,0,.6);display:none}
+#envio-fondo.abierto{display:block}
+#envio{box-sizing:border-box;position:fixed;left:0;right:0;bottom:0;z-index:90;background:#1A1D24;border-top:1px solid #343846;border-radius:20px 20px 0 0;padding:22px 20px calc(22px + env(safe-area-inset-bottom));display:none;flex-direction:column;gap:14px;color:#ECEEF3;font-family:Inter,system-ui,sans-serif;max-width:560px;margin:0 auto}
+#envio.abierto{display:flex}
+#envio h2{margin:0;font-family:Montserrat,sans-serif;font-weight:800;font-size:22px;line-height:1.2}
+#envio p{margin:0;color:#B4B9C6;font-size:15px;line-height:1.5}
+.envio-btn{box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;border-radius:12px;padding:15px 16px;font:700 16px Inter,system-ui,sans-serif;cursor:pointer;text-decoration:none}
+.envio-wa{background:#FFE600;color:#111}
+.envio-copiar{background:transparent;color:#ECEEF3;border:1px solid #343846}
+#envio-link{display:block;width:100%;box-sizing:border-box;padding:10px 12px;border-radius:10px;border:1px solid #2a2e39;background:#0E0F13;color:#B4B9C6;font:13px ui-monospace,Consolas,monospace}
+#envio-ok{display:none;align-items:center;gap:8px;color:#6EE7B7;font-size:14px;font-weight:600}
+#envio-ok.visible{display:flex}
+#envio-cerrar{position:absolute;top:12px;right:12px;width:40px;height:40px;border:0;border-radius:50%;background:transparent;color:#8D93A1;display:flex;align-items:center;justify-content:center;cursor:pointer}
+html.es-movil body.envio-abierto{overflow:hidden}
+</style>
 <style>html{scroll-behavior:smooth}img{max-width:100%}
 #barra-movil{display:none}
 @media (max-width:720px){
@@ -58,6 +86,10 @@ details summary::-webkit-details-marker{display:none}
 <body>
 <div style="min-height: 100vh; background: #0E0F13; color: #ECEEF3; font-family: Inter, system-ui, sans-serif; font-size: 16px; line-height: 1.6">
 
+  <div class="solo-movil" role="note" style="background: #FFE600; color: #111111">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 11px 20px; display: flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; font-size: 15px; text-align: center"><svg aria-hidden="true" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg><span>KibianSubs es para PC con Windows</span></div>
+  </div>
+
   <header style="border-bottom: 1px solid #22252e">
     <nav style="max-width: 1180px; margin: 0 auto; padding: 18px 24px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px">
       <a href="#inicio" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: #ECEEF3">
@@ -84,6 +116,7 @@ details summary::-webkit-details-marker{display:none}
         <a href="#precio" data-goatcounter-click="ver-pro-inicio" style="border: 1px solid #343846; color: #ECEEF3; text-decoration: none; font-weight: 600; padding: 15px 26px; border-radius: 12px; font-size: 17px">Pro para siempre · 19,99 USD</a>
       </div>
       <p style="margin: 0; font-size: 14px; color: #B4B9C6; display: flex; flex-wrap: wrap; gap: 6px 18px"><span style="color: #B4B9C6"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span>Sin tarjeta</span><span style="color: #B4B9C6"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span>Sin crear cuenta</span><span style="color: #B4B9C6"><span style="color: #6EE7B7"><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M20 6 9 17l-5-5"/></svg></span>Para Windows 10 y 11</span></p>
+      <p class="solo-movil" style="margin: 0; font-size: 13px; color: #8D93A1"><span style="display: inline-flex; align-items: center; gap: 6px"><svg aria-hidden="true" width="14px" height="14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Versión para Android próximamente</span></p>
       <p id="contador" hidden style="margin: 0; font-size: 15px; color: #ECEEF3"><svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg><strong id="contador-n" style="color: #FFE600"></strong> descargas y contando</p>
       <div style="display: flex; flex-direction: column; gap: 8px; max-width: 560px; padding: 14px 16px; border: 1px solid #2a2e39; border-radius: 12px; background: #14161C; font-size: 14px; color: #B4B9C6">
         <span><svg aria-hidden="true" width="1em" height="1em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 0px; margin-right: 6px; flex: none"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>Al instalar, si Windows muestra <strong style="color: #ECEEF3">“Windows protegió tu PC”</strong>, toca <strong style="color: #ECEEF3">“Más información”</strong> y luego <strong style="color: #ECEEF3">“Ejecutar de todas formas”</strong>. Aparece con los programas nuevos que Windows aún no conoce.</span>
@@ -394,6 +427,17 @@ details summary::-webkit-details-marker{display:none}
     </div>
   </section>
 
+  <div id="envio-fondo"></div>
+  <div id="envio" role="dialog" aria-modal="true" aria-labelledby="envio-titulo" aria-hidden="true">
+    <button id="envio-cerrar" type="button" aria-label="Cerrar"><svg aria-hidden="true" width="22px" height="22px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+    <h2 id="envio-titulo">Descárgalo en tu PC</h2>
+    <p>KibianSubs funciona en computadores con Windows 10 y 11. Envíate el link y ábrelo en tu PC para descargarlo gratis.</p>
+    <a id="envio-wa" class="envio-btn envio-wa" href="#" target="_blank" rel="noopener" data-goatcounter-click="enviar-whatsapp-movil"><svg aria-hidden="true" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4 8.6 8.6 0 0 1-3.8-.9L3 21l1.9-5.2A8.4 8.4 0 1 1 21 11.5z"/></svg>Enviármelo por WhatsApp</a>
+    <button id="envio-copiar" class="envio-btn envio-copiar" type="button" data-goatcounter-click="copiar-link-movil"><svg aria-hidden="true" width="20px" height="20px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copiar el link</button>
+    <span id="envio-ok" role="status"><svg aria-hidden="true" width="16px" height="16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M20 6 9 17l-5-5"/></svg>Link copiado. Pégalo en un chat o correo y ábrelo en tu PC.</span>
+    <input id="envio-link" type="text" readonly aria-label="Link para descargar en tu PC">
+  </div>
+
   <div id="barra-movil" aria-hidden="true">
     <a href="#descargar" data-download data-goatcounter-click="descargar-barra-movil" tabindex="-1">Probar gratis sin registro<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></a>
   </div>
@@ -426,6 +470,53 @@ details summary::-webkit-details-marker{display:none}
     }
     if (!url) return;
     document.querySelectorAll("[data-download]").forEach(function (a) { a.href = url; });
+  })();
+
+  // En celular: los botones de descarga no bajan el .exe; abren la ventana
+  // para enviarse el link al PC. Va antes de GoatCounter para que los clics
+  // queden con su nombre de celular.
+  (function () {
+    if (!document.documentElement.classList.contains("es-movil")) return;
+    var BASE = "https://fabianlasso3.github.io/kibiansubs/";
+    var ref = "";
+    try { ref = (new URLSearchParams(location.search).get("ref") || "").replace(/[^a-zA-Z0-9_-]/g, "").slice(0, 40); } catch (e) {}
+    var link = BASE + (ref ? "?ref=" + encodeURIComponent(ref) : "");
+    var ICONO = '<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; flex: none"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg>';
+    var fondo = document.getElementById("envio-fondo");
+    var hoja = document.getElementById("envio");
+    var ok = document.getElementById("envio-ok");
+    var campo = document.getElementById("envio-link");
+    campo.value = link;
+    document.getElementById("envio-wa").href = "https://wa.me/?text=" + encodeURIComponent("KibianSubs para descargar en mi PC: " + link);
+    var ultimo = null;
+    function abrir(origen) {
+      ultimo = origen; ok.classList.remove("visible");
+      fondo.classList.add("abierto"); hoja.classList.add("abierto");
+      hoja.setAttribute("aria-hidden", "false"); document.body.classList.add("envio-abierto");
+      document.getElementById("envio-wa").focus();
+    }
+    function cerrar() {
+      fondo.classList.remove("abierto"); hoja.classList.remove("abierto");
+      hoja.setAttribute("aria-hidden", "true"); document.body.classList.remove("envio-abierto");
+      if (ultimo) ultimo.focus();
+    }
+    document.querySelectorAll("[data-download]").forEach(function (a) {
+      a.innerHTML = "Envíame el link para mi PC" + ICONO;
+      a.href = "#enviar-link";
+      a.setAttribute("role", "button");
+      var nombre = (a.getAttribute("data-goatcounter-click") || "descargar").replace(/^descargar/, "pedir-link-movil");
+      a.setAttribute("data-goatcounter-click", nombre);
+      a.addEventListener("click", function (e) { e.preventDefault(); abrir(a); });
+    });
+    fondo.addEventListener("click", cerrar);
+    document.getElementById("envio-cerrar").addEventListener("click", cerrar);
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape" && hoja.classList.contains("abierto")) cerrar(); });
+    document.getElementById("envio-copiar").addEventListener("click", function () {
+      function listo() { ok.classList.add("visible"); }
+      function aMano() { campo.focus(); campo.select(); try { if (document.execCommand("copy")) listo(); } catch (e) {} }
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(link).then(listo, aMano);
+      else aMano();
+    });
   })();
 
   // Contador real de descargas (GitHub). Solo se muestra desde MIN_DESCARGAS.
