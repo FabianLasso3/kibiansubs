@@ -1,4 +1,4 @@
-KibianSubs — Landing (versión 2.0)
+KibianSubs — Landing (versión 2.1)
 ==================================
 
 Archivos:
@@ -60,6 +60,22 @@ IMPORTANTE al subir una versión nueva:
   misma) a la raíz del repositorio. No subas el .zip al repositorio.
 
 Versiones:
+  2.1 — Celular: tarjeta arriba (sin bajar) con "Enviarme el link por
+        WhatsApp" en un solo toque, "Copiar el link" y "Otras formas
+        (correo, Telegram...)"; la barra fija trae WhatsApp y Copiar link;
+        los demás botones de descarga abren WhatsApp directo. Se quita la
+        ventana intermedia de la v2.0. Si el navegador de TikTok no deja
+        copiar, se muestra el link para mantenerlo presionado.
+        Links enviados: ?ref=whatsapp-movil, ?ref=copiado-movil o
+        ?ref=compartido-movil, más &utm_campaign=<origen de la visita>
+        (por ejemplo tiktok-ads), que GoatCounter muestra en "Campaigns".
+        Clics nuevos: whatsapp-movil-inicio / -barra / -pasos / -precio /
+        -final, copiar-movil-inicio / -barra y compartir-movil.
+        Nota de seguridad sin la palabra VirusTotal: "Revisado por más de
+        50 programas de seguridad: ninguno encontró problemas" (el enlace
+        sigue llevando al análisis); su clic ahora se llama
+        analisis-seguridad. Títulos limpios en GoatCounter para todos los
+        botones. En PC todo queda igual.
   2.0 — Visitas desde el celular (en computador todo sigue igual): aviso
         arriba "KibianSubs es para PC con Windows"; los botones de descarga
         y la barra amarilla dicen "Envíame el link para mi PC" y abren una
