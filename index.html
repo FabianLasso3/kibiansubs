@@ -53,7 +53,11 @@ html.es-movil .accion-movil{display:flex}
 .am-ok{color:#6EE7B7;font-weight:600}
 .am-ayuda{color:#FFE600;font-weight:600}
 .am-link{box-sizing:border-box;width:100%;padding:11px 12px;border-radius:10px;border:1px solid #2a2e39;background:#0E0F13;color:#ECEEF3;font:14px ui-monospace,Consolas,monospace}
-.am-android{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;color:#8D93A1}
+.am-android{display:flex;justify-content:center;border-top:1px solid #262a33;padding-top:12px;margin-top:2px}
+.am-android-btn{display:inline-flex;align-items:center;gap:6px;background:none;border:0;padding:4px;color:#8D93A1;font:500 13px Inter,system-ui,sans-serif;cursor:pointer}
+.am-android-btn u{text-underline-offset:3px;color:#B4B9C6}
+.am-android-ok{display:flex;align-items:flex-start;gap:6px;color:#6EE7B7;font-size:13px;line-height:1.4;text-align:left}
+.am-android-ok[hidden]{display:none}
 html.es-movil #inicio{padding-top:28px!important;padding-bottom:56px!important;gap:32px!important}
 html.es-movil #inicio > div{gap:18px!important}
 #aviso-movil{position:fixed;left:16px;right:16px;bottom:calc(84px + env(safe-area-inset-bottom));z-index:60;background:#ECEEF3;color:#111;border-radius:12px;padding:12px 14px;font:600 14px Inter,system-ui,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.4);display:none}
@@ -127,7 +131,10 @@ html.es-movil #inicio > div{gap:18px!important}
           <input class="am-link" id="am-link" type="text" readonly aria-label="Link para descargar KibianSubs en tu PC">
         </div>
         <button class="am-otras" id="am-otras" type="button" data-goatcounter-click="compartir-movil" data-goatcounter-title="Otras formas de enviar el link"><svg aria-hidden="true" width="15px" height="15px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4"/><path d="m15.4 6.5-6.8 4"/></svg>Otras formas (correo, Telegram…)</button>
-        <span class="am-android"><svg aria-hidden="true" width="14px" height="14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>Versión para Android próximamente</span>
+        <div class="am-android">
+          <button type="button" id="am-quiero-android" class="am-android-btn" data-goatcounter-click="quiero-android" data-goatcounter-title="La quiero en Android"><svg aria-hidden="true" width="14px" height="14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><rect x="6" y="2" width="12" height="20" rx="2"/><path d="M11 18h2"/></svg>¿La quieres en Android? <u>Avísanos aquí</u></button>
+          <span id="am-android-ok" class="am-android-ok" hidden><svg aria-hidden="true" width="14px" height="14px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="flex: none"><path d="M20 6 9 17l-5-5"/></svg>Gracias, lo tendremos en cuenta. Cuando salga, lo anunciaremos en esta página.</span>
+        </div>
       </div>
       <div style="display: flex; flex-wrap: wrap; gap: 12px">
         <a class="solo-pc" href="#descargar" data-download data-goatcounter-click="descargar-inicio" data-goatcounter-title="Descargar (inicio)" style="background: #FFE600; color: #111111; text-decoration: none; font-weight: 700; padding: 15px 26px; border-radius: 12px; font-size: 17px">Probar gratis sin registro<svg aria-hidden="true" width="1.05em" height="1.05em" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -0.17em; margin-left: 8px; margin-right: 0px; flex: none"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></a>
@@ -555,6 +562,18 @@ html.es-movil #inicio > div{gap:18px!important}
     document.querySelectorAll(".am-accion-copiar").forEach(function (b) {
       b.addEventListener("click", function () { copiar(b.getAttribute("data-pos")); });
     });
+
+    // Interés en Android: se cuenta una vez por celular (GoatCounter "quiero-android").
+    (function () {
+      var btn = document.getElementById("am-quiero-android"), okA = document.getElementById("am-android-ok");
+      var ya = false; try { ya = localStorage.getItem("kibian-quiere-android") === "1"; } catch (e) {}
+      function gracias() { btn.hidden = true; btn.style.display = "none"; okA.hidden = false; }
+      if (ya) { btn.removeAttribute("data-goatcounter-click"); gracias(); return; }
+      btn.addEventListener("click", function () {
+        try { localStorage.setItem("kibian-quiere-android", "1"); } catch (e) {}
+        gracias();
+      });
+    })();
 
     // Otras formas: menú de compartir del celular o, si no existe, el correo
     document.getElementById("am-otras").addEventListener("click", function () {

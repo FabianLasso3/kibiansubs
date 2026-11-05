@@ -1,4 +1,4 @@
-KibianSubs — Landing (versión 2.1)
+KibianSubs — Landing (versión 2.2)
 ==================================
 
 Archivos:
@@ -60,6 +60,12 @@ IMPORTANTE al subir una versión nueva:
   misma) a la raíz del repositorio. No subas el .zip al repositorio.
 
 Versiones:
+  2.2 — Celular: la línea "Versión para Android próximamente" pasa a ser
+        "¿La quieres en Android? Avísanos aquí" (discreta, al final de la
+        tarjeta). Al tocarla muestra "Gracias, lo tendremos en cuenta.
+        Cuando salga, lo anunciaremos en esta página." y cuenta el clic en
+        GoatCounter como quiero-android (una sola vez por celular). No
+        guarda correos ni teléfonos.
   2.1 — Celular: tarjeta arriba (sin bajar) con "Enviarme el link por
         WhatsApp" en un solo toque, "Copiar el link" y "Otras formas
         (correo, Telegram...)"; la barra fija trae WhatsApp y Copiar link;
